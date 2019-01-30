@@ -1,62 +1,43 @@
-import React, { Component } from 'react';
+import React from 'react';
 import styled from 'styled-components';
 
-import Shared from '../SharedComponents';
-import OnDemand from '../OnDemandComponents';
 import Search from '../Search';
 
-export default class Tabs extends Component {
-
-    state = {
-        toggle: false
-    }
-
-    toggle = (e) => {
-        e.preventDefault();
-        this.setState(prevState => ({
-            toggle: !prevState.toggle
-        }));
-    }
-    
-    render() { 
-        const { toggle } = this.state
-        let sharedActive = !toggle ? 'active' : '';
-        let demandActive = toggle ? 'active' : '';
-       
-        return (
-            <>
-                <TabsMenu>
-                    <BoxTab 
-                        onClick={(e) => this.toggle(e)} 
-                        value='Shared'
-                        className={sharedActive}>
-                        {!toggle && <Line />}
-                        <Icon src='/images/asset15.png' alt='Shared flights' />
-                        <Label>SHARED</Label>
-                        <Description className={sharedActive}>Hop on a flight that is already going</Description>
-                        <Price className={sharedActive}>$50+</Price>
-                    </BoxTab> 
-                    <BoxTab 
-                        onClick={(e) => this.toggle(e)} 
-                        value='Demand'
-                        className={demandActive}>
-                        {toggle && <Line />} 
-                        <Icon src='/images/asset16.png' alt='On Demand flights' />
-                        <Label>ON DEMAND</Label> 
-                        <Description className={demandActive}>Choose a plane, choose a <br />pilot</Description>
-                        <Price className={demandActive}>$299+</Price>
-                    </BoxTab>
-                </TabsMenu> 
-                <Search />
-                {toggle ? <OnDemand /> : <Shared />}
-            </>
-        );
-    }
-}
+export const Tabs = ({ toggle, on }) => {
+        let sharedActive = !on ? 'active' : '';
+        let demandActive = on ? 'active' : '';
+    return (
+        <>
+            <TabsMenu>
+                <BoxTab 
+                    onClick={toggle} 
+                    value='Shared'
+                    className={sharedActive}>
+                    {!on && <Line />}
+                    <Icon src='/images/asset15.png' alt='Shared flights' />
+                    <Label>SHARED</Label>
+                    <Description className={sharedActive}>Hop on a flight that is already going</Description>
+                    <Price className={sharedActive}>$50+</Price>
+                </BoxTab> 
+                <BoxTab 
+                    onClick={toggle} 
+                    value='Demand'
+                    className={demandActive}>
+                    {on && <Line />} 
+                    <Icon src='/images/asset16.png' alt='On Demand flights' />
+                    <Label>ON DEMAND</Label> 
+                    <Description className={demandActive}>Choose a plane, choose a <br />pilot</Description>
+                    <Price className={demandActive}>$299+</Price>
+                </BoxTab>
+            </TabsMenu> 
+            <Search />
+        </>
+    );
+};
 
 const TabsMenu = styled.div `
     position: absolute;
-    top: 240px;
+    top: 247px;
     left: 0;
     right: 0;
     display: flex;

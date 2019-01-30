@@ -1,12 +1,12 @@
 import React from 'react';
 import { BrowserRouter, Route } from 'react-router-dom';
 
-import Hero from './components/Hero';
+import Landing from './components/Landing';
 
 const App = () => {
     return (
         <>
-            <Hero />
+            <Landing />
         </>
     );
 };

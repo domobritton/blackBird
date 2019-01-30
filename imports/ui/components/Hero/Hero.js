@@ -2,32 +2,33 @@ import React, { Component } from 'react';
 import styled from 'styled-components';
 
 import Header from '../Header';
-import Tabs from './Tabs';
 
 export default class Hero extends Component {
 
   render() {
     return (
-        <>
+        <HeroWrapper>
             <Header />
-            <HeroWrapper>
-                <Image src='/images/asset13.jpeg' alt='Blackbird Hero' />
+            <ImageWrapper>
+                <Image src='/images/asset13.jpeg' alt='Blackbird Image' />
                 <TextBox>
                     <h1>DEFY GRAVITY</h1>
                     <h2>Experience the freedom of flight, for less than the cost of driving</h2>
                 </TextBox>
-            </HeroWrapper>
-            <Tabs />
-        </>
+            </ImageWrapper>
+        </HeroWrapper>
     );
   }
 };
 
 const HeroWrapper = styled.div`
     position: relative;
-    // margin-top: -80px;
+`;
+
+const ImageWrapper = styled.div`
+    position: relative;
     width: 100vw;
-    height: 95vh;
+    height: 550px;
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -43,7 +44,7 @@ const Image = styled.img`
 const TextBox = styled.div`
     width: 650px;
     position: absolute;
-    top: 80px;
+    top: 85px;
     left: 0;
     right: 0;
     margin: auto;
