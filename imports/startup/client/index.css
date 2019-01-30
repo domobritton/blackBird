@@ -1,0 +1,16 @@
+@font-face {
+    font-family: 'Gilroy';
+    src: local('Gilroy'), url(./fonts/gilroy-light.otf) format('otf');
+}
+
+body {
+    font-family: 'Gilroy', sans-serif;
+}
+
+h1 {
+    margin: 0;
+}
+
+h2 {
+    margin: 0;
+}
