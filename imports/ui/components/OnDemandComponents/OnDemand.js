@@ -2,28 +2,30 @@ import React, { Component } from 'react';
 import styled from 'styled-components';
 
 import { Planes } from './Planes';
+import { Product } from './Product';
 export default class OnDemand extends Component {
   render() {
     return (
       <Page>
-        <Wrapper>
+        <Section>
           <Heading>ON DEMAND</Heading>
           <SubHeading>Experience the freedom of flight on your schedule.</SubHeading>
+          <Line />
           <Planes />
-        </Wrapper>
+        </Section>
+        <Product />
       </Page>
     )
   }
 }
 
 const Page = styled.div`
-    display: flex;
-    justify-content: center;
     padding-top: 50px;
 `;
 
-const Wrapper = styled.div`
-    flex-basis: 80%;
+const Section = styled.div`
+    width: 80%;
+    margin: auto;
 `;
 
 const Heading = styled.h1`
