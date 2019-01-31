@@ -9,12 +9,27 @@ export const Product = () => (
             <SubTitle>Take control of the trip</SubTitle>
             <Heading>Welcome to the largest network of rentable aircraft in the US.</Heading>
             <Line />
+            <Boxes>
+                <Box>
+                    <Icon src='/images/asset6.png' />
+                    <Text>Choose your plane.</Text>
+                </Box>
+                <Box>
+                    <Icon src='/images/asset7.png' />
+                    <Text>Pick a certified commercial pilot or bring your own.</Text>
+                </Box>
+                <Box>
+                    <Icon src='/images/asset8.png' />
+                    <Text>Fly from convenient, local airports at a time that suits you.</Text>
+                </Box>
+            </Boxes>
         </Details>
     </Section>
 )
 
 const Section = styled.div`
     display: flex;
+    justify-content: center;
     height: 470px;
     width: 100vw;
 `;
@@ -28,10 +43,11 @@ const Details = styled.div`
     display: flex;
     justify-content: center;
     flex-direction: column;
+    flex-basis: 58%;
 `;
 
 const Title = styled.div`
-    margin: 84px auto 12px;
+    margin: 0 auto;
     font-size: 14px;
     font-weight: 500;
     letter-spacing: 8px;
@@ -55,7 +71,31 @@ const Heading = styled(SubTitle)`
 const Line = styled.hr`
     width: 50px;
     height: 5px;
-    margin: 26px 0;
+    margin: 26px auto;
     background: #fe4041;
     border: none;
+`;
+
+const Boxes = styled.div`
+    display: flex;
+    justify-content: center;
+    margin-top: 25px;
+    width: 100%;
+`;
+
+const Box = styled.div`
+    width: 33.33333%;
+    text-align: center;
+    padding: 2.5%;
+`;
+
+const Icon = styled.img`
+    width: 50px;
+`;
+
+const Text = styled.div`
+    font-size: 16px;
+    margin-top: 20px;
+    color: #1d2133;
+    font-weight: 500;
 `;

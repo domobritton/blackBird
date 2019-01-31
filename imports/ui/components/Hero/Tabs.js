@@ -37,9 +37,9 @@ export const Tabs = ({ toggle, on }) => {
 
 const TabsMenu = styled.div `
     position: absolute;
-    top: 247px;
     left: 0;
     right: 0;
+    bottom: 39.9%;
     display: flex;
     justify-content: center;
     z-index: 10;

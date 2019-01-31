@@ -18,9 +18,9 @@ export default class Search extends Component {
 
 const Wrapper = styled.div`
     position: absolute;
-    top: 415px;
     left: 0;
     right: 0;
+    bottom: 26%;
     height: 135px;
     padding-left: 55px;
     display: flex;
@@ -30,7 +30,7 @@ const Wrapper = styled.div`
 `;
 
 const Input = styled.input`
-    flex-basis: 33%;
+    flex-basis: 37%;
     padding: 13px 18px;
     border: 1px solid transparent;
     border-radius: 2px;

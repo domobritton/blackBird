@@ -4,15 +4,15 @@ import styled from 'styled-components';
 
 export const Planes = () => (
     <Wrapper>
-        <Link to='/'>
+        <Routes to='/'>
             <Image src='/images/asset3.png' alt='Cirrus SR-22' />
-        </Link>
-        <Link to='/'>
+        </Routes>
+        <Routes to='/'>
             <Image src='/images/asset4.png' alt='Cirrus SR-22' />
-        </Link>
-        <Link to='/'>
+        </Routes>
+        <Routes to='/'>
             <Image src='/images/asset5.png' alt='Cirrus SR-22' />
-        </Link>
+        </Routes>
     </Wrapper>
 );
 
@@ -25,5 +25,9 @@ const Wrapper = styled.div`
 `;
 
 const Image = styled.img`
-    height: 180px;
+    height: 70%;
+`;
+
+const Routes = styled(Link)`
+    height: 350px;
 `;

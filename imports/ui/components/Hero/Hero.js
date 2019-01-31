@@ -28,7 +28,7 @@ const HeroWrapper = styled.div`
 const ImageWrapper = styled.div`
     position: relative;
     width: 100vw;
-    height: 550px;
+    height: 74vh;
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -44,7 +44,7 @@ const Image = styled.img`
 const TextBox = styled.div`
     width: 650px;
     position: absolute;
-    top: 85px;
+    top: 145px;
     left: 0;
     right: 0;
     margin: auto;

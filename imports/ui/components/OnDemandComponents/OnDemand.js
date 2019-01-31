@@ -3,6 +3,7 @@ import styled from 'styled-components';
 
 import { Planes } from './Planes';
 import { Product } from './Product';
+import { Safety } from './Safety';
 export default class OnDemand extends Component {
   render() {
     return (
@@ -14,6 +15,7 @@ export default class OnDemand extends Component {
           <Planes />
         </Section>
         <Product />
+        <Safety />
       </Page>
     )
   }
