@@ -6,25 +6,25 @@ import Regions from './Regions';
 export default class Shared extends Component {
   render() {
     return (
-      <PageWrapper>
-        <Page>
+      <Page>
+        <Wrapper>
           <Heading>SHARED</Heading>
           <SubHeading>Hop on a plane and get to where you want to be.</SubHeading>
           <Line />
           <Regions />
-        </Page>
-      </PageWrapper>
+        </Wrapper>
+      </Page>
     )
   }
 }
 
-const PageWrapper = styled.div`
+const Page = styled.div`
     display: flex;
     justify-content: center;
     padding-top: 50px;
 `;
 
-const Page = styled.div`
+const Wrapper = styled.div`
     flex-basis: 80%;
 `;
 

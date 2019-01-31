@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 import { Hero, Tabs } from '../Hero';
 import Shared from '../SharedComponents';
 import OnDemand from '../OnDemandComponents';
+import { Footer }from '../Footer';
 
 
 export default class Landing extends Component {
@@ -29,6 +30,7 @@ export default class Landing extends Component {
             on={on}
             />
         {on ? <OnDemand /> : <Shared />}
+        <Footer />
       </>
     )
   }

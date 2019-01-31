@@ -13,7 +13,7 @@ const regionData = [
                         airport: 'Bermuda Dunes Airport',
                         price: '$299+',
                         time: '120m',
-                        image: ''
+                        image: '/images/coachella.png'
                     },
                     {
                         id: 1001,
@@ -21,7 +21,7 @@ const regionData = [
                         airport: 'Santa Barbara Airport',
                         price: '$129+',
                         time: '75m',
-                        image: ''
+                        image: '/images/santa_barbara.jpeg'
                     },
                     {
                         id: 1002,
@@ -29,7 +29,7 @@ const regionData = [
                         airport: 'Hawthorne Airport',
                         price: '$159+',
                         time: '90m',
-                        image: ''
+                        image: '/images/hawthorne.jpeg'
                     },
                     {
                         id: 1003,
@@ -37,7 +37,7 @@ const regionData = [
                         airport: 'Truckee Airport',
                         price: '$299+',
                         time: '60m',
-                        image: ''
+                        image: '/images/tahoe.jpeg'
                     },
                     {
                         id: 1004,
@@ -45,7 +45,7 @@ const regionData = [
                         airport: 'Sacramento Executive Airport',
                         price: '$35+',
                         time: '30m',
-                        image: ''
+                        image: '/images/sacramento.jpeg'
                     },
                 ]
             },
@@ -59,7 +59,7 @@ const regionData = [
                         airport: 'Truckee Airport',
                         price: '$299+',
                         time: '60m',
-                        image: ''
+                        image: '/images/tahoe.jpeg'
                     }
                 ]
             },
@@ -73,7 +73,7 @@ const regionData = [
                         airport: 'Burbank Airport',
                         price: '$59+',
                         time: '80m',
-                        image: ''
+                        image: '/images/burbank.jpeg'
                     },
                     {
                         id: 1007,
@@ -81,7 +81,7 @@ const regionData = [
                         airport: 'Las Vegas Airport',
                         price: '$79+',
                         time: '80m',
-                        image: ''
+                        image: '/images/las_vegas.jpeg'
                     },
                     {
                         id: 1008,
@@ -89,7 +89,7 @@ const regionData = [
                         airport: 'Truckee Airport',
                         price: '$299+',
                         time: '60m',
-                        image: ''
+                        image: '/images/tahoe.jpeg'
                     },
                     {
                         id: 1009,
@@ -97,7 +97,7 @@ const regionData = [
                         airport: 'Hawthorne Airport',
                         price: '$102+',
                         time: '90m',
-                        image: ''
+                        image: '/images/hawthorne.jpeg'
                     },
                     {
                         id: 1010,
@@ -105,7 +105,7 @@ const regionData = [
                         airport: 'John Wayne Airport',
                         price: '$59+',
                         time: '120m',
-                        image: ''
+                        image: '/images/orange_county.jpeg'
                     },
                 ]
             },
@@ -119,7 +119,7 @@ const regionData = [
                         airport: 'Burbank Airport',
                         price: '$59+',
                         time: '75m',
-                        image: ''
+                        image: '/images/burbank.jpeg'
                     },
                     {
                         id: 1012,
@@ -127,7 +127,7 @@ const regionData = [
                         airport : 'Las Vegas Airport',
                         price: '$139+',
                         time: '75m',
-                        image: ''
+                        image: '/images/las_vegas.jpeg'
                     }
                 ]
             },
@@ -137,10 +137,10 @@ const regionData = [
                 toCity: [{
                         id: 1013,
                         destination: 'PALO ALTO',
-                        airport: 'Burbank Airport',
-                        price: '$59+',
-                        time: '75m',
-                        image: ''
+                        airport: 'Palo Alto Airport',
+                        price: '$299+',
+                        time: '55m',
+                        image: '/images/palo_alto.jpeg'
                     },
                     {
                         id: 1014,
@@ -148,7 +148,7 @@ const regionData = [
                         airport: 'San Carlos Airport',
                         price: '$146+',
                         time: '60m',
-                        image: ''
+                        image: '/images/san_carlos.jpeg'
                     },
                     {
                         id: 1015,
@@ -156,7 +156,7 @@ const regionData = [
                         airport: 'Oakland Airport',
                         price: '$199+',
                         time: '60m',
-                        image: ''
+                        image: '/images/oakland.jpeg'
                     }
                 ]
             }
