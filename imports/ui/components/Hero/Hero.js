@@ -1,25 +1,20 @@
-import React, { Component } from 'react';
+import React from 'react';
 import styled from 'styled-components';
 
 import Header from '../Header';
 
-export default class Hero extends Component {
-
-  render() {
-    return (
-        <HeroWrapper>
-            <Header />
-            <ImageWrapper>
-                <Image src='/images/asset13.jpeg' alt='Blackbird Image' />
-                <TextBox>
-                    <h1>DEFY GRAVITY</h1>
-                    <h2>Experience the freedom of flight, for less than the cost of driving</h2>
-                </TextBox>
-            </ImageWrapper>
-        </HeroWrapper>
-    );
-  }
-};
+export const Hero = () => (
+    <HeroWrapper>
+        <Header />
+        <ImageWrapper>
+            <Image src='/images/asset13.jpeg' alt='Blackbird Image' />
+            <TextBox>
+                <h1>DEFY GRAVITY</h1>
+                <h2>Experience the freedom of flight, for less than the cost of driving</h2>
+            </TextBox>
+        </ImageWrapper>
+    </HeroWrapper>
+);
 
 const HeroWrapper = styled.div`
     position: relative;

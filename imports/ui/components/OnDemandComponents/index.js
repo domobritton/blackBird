@@ -1,3 +1,3 @@
-import OnDemand from './OnDemand';
+import { OnDemand } from './OnDemand';
 
-export default OnDemand;
+export { OnDemand };

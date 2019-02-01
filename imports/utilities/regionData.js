@@ -1,4 +1,4 @@
-const regionData = [
+export const regionData = [
     {
         id: 1,
         heading: 'San Francisco Bay Area',
@@ -163,5 +163,3 @@ const regionData = [
         ]
     }
 ]
-
-export default regionData;

@@ -1,35 +1,32 @@
-import React, { Component, Fragment } from 'react';
+import React, { Fragment } from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
-import regionData from '../../../utilities/regionData';
+import { regionData } from '../../../utilities';
 
 import { Cities } from './Cities';
 
-export default class Regions extends Component {
-  render() {
-    return (
-        <>
-            {regionData.map(region => (
-                <Fragment key={region.id}>
-                    <Title>{region.heading}</Title>
-                    <Wrapper>
-                        {region.cities.map(cities => (
-                            <Fragment key={cities.id}>
-                                <Cities cities={cities} />
-                            </Fragment>
-                        ))}     
-                    </Wrapper>
-                    <Routes to='/'>
-                    See all Routes in San Francisco Bay Area
-                    <Arrow src='/images/asset14.svg' />
-                    </Routes>
-                </Fragment>
-            ))}
-        </>
-    )
-  }
-}
+
+export const Regions = () => (
+    <>
+        {regionData.map(region => (
+            <Fragment key={region.id}>
+                <Title>{region.heading}</Title>
+                <Wrapper>
+                    {region.cities.map(cities => (
+                        <Fragment key={cities.id}>
+                            <Cities cities={cities} />
+                        </Fragment>
+                    ))}     
+                </Wrapper>
+                <Routes to='/'>
+                See all Routes in San Francisco Bay Area
+                <Arrow src='/images/asset14.svg' />
+                </Routes>
+            </Fragment>
+        ))}
+    </>
+);
 
 const Wrapper = styled.div`
     display: flex;

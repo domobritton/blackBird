@@ -1,29 +1,24 @@
-import React, { Component } from 'react';
+import React from 'react';
 
 import { Toggle } from '../../../utilities';
 
-import { Hero, Tabs } from '../Hero';
-import Shared from '../SharedComponents';
-import OnDemand from '../OnDemandComponents';
+import { Hero } from '../Hero';
+import { Tabs } from './Tabs';
+import { Shared } from '../SharedComponents';
+import { OnDemand } from '../OnDemandComponents';
 import { Footer }from '../Footer';
 
-
-export default class Landing extends Component {
-
-  render() {
-    return (
-      <>
-        <Hero />
-        <Toggle>
-            {({on, toggle}) => (
-                <>
-                <Tabs toggle={toggle} on={on} />
-                {on ? <OnDemand /> : <Shared />}
-                </>
-            )}
-        </Toggle>
-        <Footer />
-      </>
-    )
-  }
-}
+export const Landing = () => (
+    <>
+      <Hero />
+      <Toggle>
+          {({on, toggle}) => (
+              <>
+              <Tabs toggle={toggle} on={on} />
+              {on ? <OnDemand /> : <Shared />}
+              </>
+          )}
+      </Toggle>
+      <Footer />
+    </>
+);

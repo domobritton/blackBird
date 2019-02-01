@@ -1,25 +1,22 @@
-import React, { Component } from 'react';
+import React from 'react';
 import styled from 'styled-components';
 
 import { Planes } from './Planes';
 import { Product } from './Product';
 import { Safety } from './Safety';
-export default class OnDemand extends Component {
-  render() {
-    return (
-      <Page>
-        <Section>
-          <Heading>ON DEMAND</Heading>
-          <SubHeading>Experience the freedom of flight on your schedule.</SubHeading>
-          <Line />
-          <Planes />
-        </Section>
-        <Product />
-        <Safety />
-      </Page>
-    )
-  }
-}
+
+export const OnDemand = () => (
+    <Page>
+      <Section>
+        <Heading>ON DEMAND</Heading>
+        <SubHeading>Experience the freedom of flight on your schedule.</SubHeading>
+        <Line />
+        <Planes />
+      </Section>
+      <Product />
+      <Safety />
+    </Page>
+);
 
 const Page = styled.div`
     display: flex;

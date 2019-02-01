@@ -1,3 +1,3 @@
-import Shared from './Shared';
+import { Shared } from './Shared';
 
-export default Shared;
+export { Shared };

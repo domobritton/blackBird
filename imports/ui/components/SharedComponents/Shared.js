@@ -1,22 +1,18 @@
-import React, { Component } from 'react'
+import React from 'react'
 import styled from 'styled-components';
 
-import Regions from './Regions';
+import { Regions } from './Regions';
 
-export default class Shared extends Component {
-  render() {
-    return (
-      <Page>
-        <Wrapper>
-          <Heading>SHARED</Heading>
-          <SubHeading>Hop on a plane and get to where you want to be.</SubHeading>
-          <Line />
-          <Regions />
-        </Wrapper>
-      </Page>
-    )
-  }
-}
+export const Shared = () => (
+  <Page>
+    <Wrapper>
+      <Heading>SHARED</Heading>
+      <SubHeading>Hop on a plane and get to where you want to be.</SubHeading>
+      <Line />
+      <Regions />
+    </Wrapper>
+  </Page>
+);
 
 const Page = styled.div`
     display: flex;
