@@ -22,12 +22,15 @@ export default class OnDemand extends Component {
 }
 
 const Page = styled.div`
-    padding-top: 50px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding-top: 30px;
 `;
 
 const Section = styled.div`
+    margin: 0 auto;
     width: 80%;
-    margin: auto;
 `;
 
 const Heading = styled.h1`

@@ -35,17 +35,17 @@ export const Tabs = ({ toggle, on }) => {
     );
 };
 
-const TabsMenu = styled.div `
+const TabsMenu = styled.div`
     position: absolute;
     left: 0;
     right: 0;
     bottom: 39.9%;
     display: flex;
     justify-content: center;
-    z-index: 10;
+    z-index: 9;
 `;
 
-const BoxTab = styled.button `
+const BoxTab = styled.button`
     position: relative;
     width: 300px;
     height: 168px;
@@ -60,7 +60,7 @@ const BoxTab = styled.button `
     }
 `;
 
-const Line = styled.hr `
+const Line = styled.hr`
     position: absolute;
     top: -8px;
     left: 0;
@@ -71,7 +71,7 @@ const Line = styled.hr `
     background: #fe4041;
 `;
 
-const Label = styled.div `
+const Label = styled.div`
     margin: 12px auto 10px;
     font-size: 14px;
     font-weight: 500;
@@ -79,30 +79,30 @@ const Label = styled.div `
     color: #ffffff;
 `;
 
-const Description = styled.div `
+const Description = styled.div`
     margin: 6px 35px 0;
     font-size: 14px;
     line-height: 1.1;
     font-weight: 300;
-    color: gray;
+    color: hsla(0,0%,100%,0.5);
 
     &.active {
         color: #ffffff;
     }
 `;
 
-const Price = styled.div `
+const Price = styled.div`
     margin: 16px auto 0;
     font-size: 13px;
     line-height: 16px;
-    color: gray;
+    color: hsla(0,0%,100%,0.5);
 
     &.active {
         color: #ffffff;
     }
 `;
 
-const Icon = styled.img `
+const Icon = styled.img`
     position: relative;
     margin: -70px auto 5px;
     width: 80px;

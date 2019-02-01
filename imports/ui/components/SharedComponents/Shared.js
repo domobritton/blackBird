@@ -21,7 +21,7 @@ export default class Shared extends Component {
 const Page = styled.div`
     display: flex;
     justify-content: center;
-    padding-top: 50px;
+    padding-top: 30px;
 `;
 
 const Wrapper = styled.div`

@@ -3,18 +3,53 @@ import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
 export default class Header extends Component {
+
+  state = {
+    scroll: 0
+  }
+ 
+  componentDidMount() {
+    window.addEventListener('scroll', this.handleScroll)
+  }
+
+  handleScroll = () => {
+    let scroll = window.scrollY;
+    let scrollDiv = document.getElementById('scrollNav');
+    if (scroll > 60) {
+      scrollDiv.classList.add('down')
+    } else {
+      scrollDiv.classList.remove('down')
+    }
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener('scroll', this.handleScroll)
+  }
+
   render() {
     return (
-      <Nav>
-        <LeftNav>
-          <Link to='/'>
-            <Logo src='/images/asset1.png' alt='Blackbird' />
-          </Link>
-        </LeftNav>
-        <RightNav>
-          <SignIn to='/booking/signIn'>My account</SignIn>
-        </RightNav>
-      </Nav>
+      <>
+        <Nav>
+          <LeftNav>
+            <Link to='/'>
+              <Logo src='/images/asset1.png' alt='Blackbird' />
+            </Link>
+          </LeftNav>
+          <RightNav>
+            <SignIn to='/booking/signIn'>My account</SignIn>
+          </RightNav>
+        </Nav>
+        <ScrollNav id='scrollNav'>
+          <LeftNav>
+            <Link to='/'>
+              <Logo src='/images/asset0.png' alt='Blackbird' />
+            </Link>
+          </LeftNav>
+          <ScrollRightNav>
+            <ScrollSignIn to='/booking/signIn'>BOOK NOW</ScrollSignIn>
+          </ScrollRightNav>
+        </ScrollNav>
+      </>
     );
   }
 };
@@ -29,6 +64,20 @@ const Nav = styled.div`
     align-items: center;
     background: rgba(0, 0, 0, 0.2);
     height: 60px;
+`;
+
+const ScrollNav = styled(Nav)`
+    position: fixed;
+    background: #ffffff;
+    color: #000;
+    transform: translateY(-100px);
+    transition: 0.2s transform cubic-bezier(.3,.73,.3,.74);
+    box-shadow: 0 2px 23px 4px rgba(0, 0, 0, .07);
+
+    &.down {
+      transform: translateY(0);
+    }
+
 `;
 
 const Logo = styled.img`
@@ -48,6 +97,10 @@ const RightNav = styled.div`
     justify-content: flex-end;
 `;
 
+const ScrollRightNav = styled(RightNav)`
+    margin-right: 0;
+`;
+
 const SignIn = styled(Link)`
     display: flex;
     align-items: center;
@@ -61,3 +114,10 @@ const SignIn = styled(Link)`
     border-radius: 2px;
     padding: 10px;
 `;
+
+const ScrollSignIn = styled(SignIn)`
+    height: 40px;
+    width: 86px;
+    border-radius: 0px;
+`;
+

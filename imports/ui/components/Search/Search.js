@@ -5,9 +5,15 @@ export default class Search extends Component {
   render() {
     return (
       <Wrapper>
-            <Input type='text' placeholder='SAN FRANCISCO, CA'/>
+        <InputBox>
+            <InputLabel htmlFor='fromCity'>FLY FROM</InputLabel>
+            <Input id='fromCity' type='text' placeholder='SAN FRANCISCO, CA'/>
+        </InputBox>
             <Logo src='/images/asset2.svg' />
-            <Input type='text' placeholder='CITY'/>
+        <InputBox>
+            <InputLabel htmlFor='toCity'>TO</InputLabel>
+            <Input id='toCity' type='text' placeholder='CITY'/>
+        </InputBox>
             <Button>
                 <Arrow src='/images/asset14.svg' />
             </Button>
@@ -29,16 +35,32 @@ const Wrapper = styled.div`
     background: #3c4156;
 `;
 
+const InputBox = styled.div`
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    margin-top: -20px;
+    flex-basis: 39%;
+`;
+
+const InputLabel = styled.label`
+    color: #ffffff;
+    font-size: 14px;
+    padding-bottom: 16px;
+    line-height: 20px;
+`;
+
 const Input = styled.input`
-    flex-basis: 37%;
     padding: 13px 18px;
     border: 1px solid transparent;
     border-radius: 2px;
 `;
 
+
 const Button = styled.button`
     width: 46px;
     height: 46px;
+    margin-top: 15px;
     border: 1px solid #fe4041;
     border-radius: 2px;
     background: #fe4041;
@@ -57,5 +79,5 @@ const Arrow = styled.img`
 
 const Logo = styled.img`
     width: 24px;
-    margin: 0 20px;
+    margin: 15px 20px 0;
 `;

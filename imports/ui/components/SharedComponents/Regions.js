@@ -2,7 +2,8 @@ import React, { Component, Fragment } from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
-import regionData from './regionData';
+import regionData from '../../../utilities/regionData';
+
 import { Cities } from './Cities';
 
 export default class Regions extends Component {
@@ -50,7 +51,7 @@ const Routes = styled(Link)`
     border-radius: 3px;
     background: #fe4041;
     padding: 9px 15px;
-    width: 27%;
+    width: 275px;
     color: #ffffff;
     text-decoration: none;
     font-size: 14px;

@@ -22,8 +22,13 @@ export const Cities = ({ cities }) => (
 const Wrapper = styled.div `
     display: grid;
     grid-gap: 20px;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: repeat(4, 1fr);
     margin-bottom: 50px;
+
+    @media screen and (max-width: 768px) {
+        grid-template-columns: 1fr;
+        grid-gap: 80px;
+    }
 `;
 
 const Box = styled(Link)`
@@ -40,10 +45,13 @@ const Box = styled(Link)`
 `;
 
 const Image = styled.img`
-    height: 120%;
-    width: auto;
-    min-width: 100%;
+    max-width: 100%;
+    margin-top: -80px;
     opacity: 0.8;
+
+    @media screen and (max-width: 768px) {
+        margin-top: -206px;
+    }
 `;
 
 const Heading = styled.div`

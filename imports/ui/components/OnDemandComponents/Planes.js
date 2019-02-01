@@ -17,17 +17,15 @@ export const Planes = () => (
 );
 
 const Wrapper = styled.div`
-    display: grid;
-    grid-gap: 15px;
-    height: 350px;
-    padding-top: 25px;
-    grid-template-columns: 1fr 1fr 1fr;
+    display: flex;
+    justify-content: space-between;
+    margin: 50px 0 70px;
 `;
 
 const Image = styled.img`
-    height: 70%;
+    width: 100%;
 `;
 
 const Routes = styled(Link)`
-    height: 350px;
+    width: 32%;
 `;

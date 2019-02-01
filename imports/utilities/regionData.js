@@ -12,7 +12,7 @@ const regionData = [
                         destination: 'COACHELLA',
                         airport: 'Bermuda Dunes Airport',
                         price: '$299+',
-                        time: '120m',
+                        time: '150m',
                         image: '/images/coachella.png'
                     },
                     {
